@@ -9,7 +9,6 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #281b28;
 }
 
 .background {
@@ -21,6 +20,7 @@ body {
   top: 0;
   left: 0;
   position: absolute;
+  background-color: #281b28;
 }
 
 h1 {
@@ -58,7 +58,7 @@ h2 {
 }
 
 .noise {
-  z-index: 1000;
+  z-index: 10;
   position: absolute;
   top: 0;
   right: 0;
@@ -111,6 +111,20 @@ h2 {
     transform: translate(70%, -50%);
   }
 }
+@keyframes moveup {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(0, -210%);
+  }
+  100% {
+    transform: translate(0, -210%);
+  }
+}
 
 @media (max-width: 850px) {
   h1 {
@@ -126,4 +140,11 @@ h2 {
     width: 200px;
     height: 200px;
   }
+}
+
+button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
 }
