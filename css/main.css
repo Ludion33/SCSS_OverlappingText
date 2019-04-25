@@ -18,6 +18,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: enterRight 0.5s;
+          animation: enterRight 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .background {
@@ -110,6 +114,58 @@ h2 {
   border-radius: 50%;
 }
 
+@-webkit-keyframes enterRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes enterRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes leaveRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes leaveRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes test {
   0% {
     -webkit-transform: translate(70%, -50%);
@@ -140,44 +196,6 @@ h2 {
   }
 }
 
-@-webkit-keyframes moveup {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  10% {
-    -webkit-transform: translate(0, 10%);
-            transform: translate(0, 10%);
-  }
-  80% {
-    -webkit-transform: translate(0, -210%);
-            transform: translate(0, -210%);
-  }
-  100% {
-    -webkit-transform: translate(0, -210%);
-            transform: translate(0, -210%);
-  }
-}
-
-@keyframes moveup {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  10% {
-    -webkit-transform: translate(0, 10%);
-            transform: translate(0, 10%);
-  }
-  80% {
-    -webkit-transform: translate(0, -210%);
-            transform: translate(0, -210%);
-  }
-  100% {
-    -webkit-transform: translate(0, -210%);
-            transform: translate(0, -210%);
-  }
-}
-
 @media (max-width: 850px) {
   h1 {
     font-size: 4em;
@@ -198,6 +216,6 @@ button {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1000;
+  z-index: 100000;
 }
 /*# sourceMappingURL=main.css.map */

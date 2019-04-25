@@ -1,10 +1,13 @@
 let button = document.querySelector("button");
 let overlay = document.querySelector(".overlay");
 
-button.addEventListener("click", () => {
-  console.log("Button is clicked");
-  overlay.style.animation = "moveup 1s ease-in-out";
+window.addEventListener("load", function() {
+  console.log("All assets are loaded");
+  setTimeout(() => {
+    console.log("test");
+    overlay.style.animation = "leaveRight .5s ease-in";
+  }, 4000);
   setTimeout(() => {
     overlay.style.display = "none";
-  }, 1000);
+  }, 4500);
 });
